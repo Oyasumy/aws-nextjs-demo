@@ -1,9 +1,19 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import { decrement, increment, selectCount } from '../src/redux/reducer/counter'
 import styles from '../styles/Home.module.css'
+import { useSelector, useDispatch } from 'react-redux'
+import { useRouter } from 'next/router'
 
 const Home: NextPage = () => {
+  const counter = useSelector((state: any) => selectCount(state))
+  const dispatch = useDispatch()
+
+  const router = useRouter()
+  // const countValue =  selectCount()
+  console.log('count value', counter)
+
   return (
     <div className={styles.container}>
       <Head>
@@ -17,10 +27,14 @@ const Home: NextPage = () => {
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
+        <button className={styles.description} onClick={()=> router.push('/posts')}>Go to list Post</button>
         <p className={styles.description}>
           Get started by editing{' '}
           <code className={styles.code}>pages/index.tsx</code>
         </p>
+        {counter}
+        <button onClick={() => dispatch(increment())}>increment</button>
+        <button onClick={() => dispatch(decrement())}>increment</button>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>

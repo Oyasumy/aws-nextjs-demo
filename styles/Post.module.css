@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    justify-items: center;
+}
+
+.buttonAction {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+
+}
+
+.imageAction {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    max-width: 500px;
+
+}

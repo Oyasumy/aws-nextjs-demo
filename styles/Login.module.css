@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1em;
+}
+.boxInput{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+.buttonSubmit{
+    margin-top: 1em;
+    width: 300px;
+}

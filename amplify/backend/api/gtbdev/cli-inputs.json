@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "gtbdev",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "/Users/oyasumy/dev/NextJS/Tutorial/gtb-dev/amplify/backend/api/gtbdev/schema.graphql",
+    "defaultAuthType": {
+      "mode": "API_KEY",
+      "expirationTime": 7
+    },
+    "additionalAuthTypes": [
+      {
+        "mode": "AMAZON_COGNITO_USER_POOLS",
+        "cognitoUserPoolId": "authgtbdev6955695a"
+      }
+    ]
+  }
+}
